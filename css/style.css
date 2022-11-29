@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+header {
+  background-color: #322559;
+  max-width: 100%;
+  padding: 2rem 0;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+.nav-order {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 300px;
+}
+
+.container {
+  width: 95%;
+  margin: 0.5rem auto;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleNav {
+  color: white;
+  text-align: center;
+}
+
+.nav__link {
+  color: white;
+  text-align: center;
+  word-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 3px 3px 3px #ababab;
+}
+
+.nav__link:hover {
+  opacity: 0.65;
+}
+
+.nav--button {
+  display: inline;
+  background-color: #e0334a;
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.content-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-nosotros h2,
+.content-nosotros h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.img-nosotros {
+  max-width: 60%;
+}
+
+.img-torneos {
+  max-width: 60%;
+  padding-right: 2rem;
+}
+
+.title-torneo {
+  display: flex;
+  justify-content: center;
+}
+
+.title-torneo p.animate__animated.animate__pulse {
+  animation-iteration-count: infinite;
+  font-size: 3rem;
+}
+
+.img-torneos--bottom {
+  max-width: 60%;
+  padding-left: 2rem;
+}
+
+.img-torneos img,
+.img-torneos--bottom img,
+.contact-content img {
+  border: #322559 6px solid;
+  box-shadow: 6px 6px #e0334a;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.content-text {
+  max-width: 100%;
+  line-height: 2rem;
+  vertical-align: top;
+  text-align: justify;
+}
+
+.nosotros-text--bottom {
+  flex-direction: column;
+  text-align: justify;
+}
+
+.nosotros-text--bottom p {
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-text p {
+  margin-top: 2rem;
+}
+
+.inline-box {
+  display: inline-block;
+}
+
+.members-list {
+  list-style: url("../img/bullet-violeta.png") none;
+  line-height: 2rem;
+}
+
+.members-list--coral {
+  list-style: url("../img/bullet-roja.png") none;
+}
+
+.content-tienda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  width: 280px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 2px 2px 5px 0 rgba(119, 103, 112, 0.8);
+  margin: 15px;
+  transition: all 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0px 5px 20px 5px rgba(119, 103, 112, 0.8),
+    2px 2px 5px 0 rgba(119, 103, 112, 0.8);
+}
+
+.product-img {
+  width: 220px;
+  height: auto;
+  margin: 5px auto;
+}
+
+.product-img > img {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  margin-left: 10px;
+}
+
+.category {
+  font-size: 12px;
+}
+
+.product-name {
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: #e0334a;
+  padding: 0.5rem;
+  position: fixed center;
+  z-index: 10;
+  bottom: 0;
+}
+
+.textFooter {
+  color: white;
+  text-align: center;
+}
+
+.svg-footer {
+  overflow: visible;
+}
+
+/* MEDIA QUERIES  */
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-order {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .logo {
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+
+  .content {
+    flex-direction: row;
+    margin: 0.5rem auto;
+    justify-content: space-between;
+    max-width: 80%;
+  }
+
+  .contact-content a {
+    max-width: 48%;
+  }
+
+  .content-img {
+    max-width: 40%;
+  }
+
+  .nosotros-text {
+    max-width: 40%;
+  }
+
+  .content-text {
+    max-width: 60%;
+  }
+
+  .video {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  iframe {
+    width: 853px;
+    height: 480px;
+  }
+}
