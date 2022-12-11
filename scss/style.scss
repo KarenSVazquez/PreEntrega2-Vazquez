@@ -1,0 +1,252 @@
+@import "_variables";
+@import "_breakpoints";
+@import "_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+header {
+  background-color: $primaryColor;
+  max-width: 100%;
+  padding: 2rem 0;
+
+  .header-container {
+    @include axis(center, center);
+    flex-direction: column;
+
+    @include deskstop {
+      flex-direction: row;
+    }
+
+    .logo {
+      @include deskstop {
+        margin-right: 2rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .titleNav {
+      color: $backgroundColor;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 1rem;
+
+      .nav-order {
+        @include justify(space-between);
+        flex-direction: column;
+        height: 300px;
+
+        @include deskstop {
+          flex-direction: row;
+          height: auto;
+        }
+
+        .nav__link {
+          @include navLink;
+          .nav--button {
+            display: inline;
+            background-color: $secondaryColor;
+            padding: 0.5rem;
+            margin-right: 0.2rem;
+            border: 2px solid black;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  @include deskstop {
+    flex-direction: row;
+    margin: 0.5rem auto;
+    justify-content: space-between;
+    max-width: 80%;
+  }
+
+  .content-text {
+    max-width: 100%;
+    line-height: 2rem;
+    vertical-align: top;
+    text-align: justify;
+
+    @include deskstop {
+      max-width: $imgBoxSize;
+    }
+    p {
+      margin-top: 2rem;
+    }
+
+    .content-img {
+      @include deskstop {
+        max-width: $textBoxSize;
+      }
+    }
+  }
+
+  .content-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2,
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .members-list {
+      list-style: url("../img/bullet-violeta.png") none;
+      line-height: 2rem;
+    }
+  }
+
+  .img-nosotros {
+    max-width: $imgBoxSize;
+  }
+
+  .img-torneos {
+    max-width: $imgBoxSize;
+    padding-right: 2rem;
+    img {
+      border: #322559 6px solid;
+      box-shadow: 6px 6px #e0334a;
+    }
+  }
+
+  .contact-content img {
+    border: #322559 6px solid;
+    box-shadow: 6px 6px #e0334a;
+    max-width: $textBoxSize;
+  }
+
+  .torneos-text {
+    max-width: $textBoxSize;
+  }
+}
+
+.title-torneo {
+  @include justify(center);
+  p.animate__animated.animate__pulse {
+    animation-iteration-count: infinite;
+    font-size: 3rem;
+  }
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  @include justify(center);
+
+  @include deskstop {
+    width: 80%;
+
+    iframe {
+      width: 853px;
+      height: 480px;
+    }
+  }
+}
+
+.content-tienda {
+  @include justify(center);
+  flex-wrap: wrap;
+
+  .product-card {
+    width: 280px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    background-color: $backgroundColor;
+    box-shadow: 2px 2px 5px 0 rgba(119, 103, 112, 0.8);
+    margin: 15px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 5px 20px 5px rgba(119, 103, 112, 0.8),
+        2px 2px 5px 0 rgba(119, 103, 112, 0.8);
+    }
+    .product-img {
+      width: 220px;
+      height: auto;
+      margin: 5px auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .description {
+      margin-left: 10px;
+      .category {
+        font-size: 12px;
+      }
+      .product-name {
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.title-contacto {
+  @include justify(center);
+}
+
+.svg-footer {
+  overflow: visible;
+}
+
+footer {
+  background-color: $secondaryColor;
+  padding: 0.5rem;
+  position: fixed center;
+  z-index: 10;
+  bottom: 0;
+
+  .textFooter {
+    color: $backgroundColor;
+    text-align: center;
+
+    .nav__link {
+      @include navLink;
+    }
+  }
+}
+
+.container {
+  width: 95%;
+  margin: 0.5rem auto;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    @include deskstop {
+      max-width: 48%;
+    }
+
+    img {
+      border: $primaryColor 6px solid;
+      box-shadow: 6px 6px $secondaryColor;
+      width: 100%;
+    }
+  }
+}

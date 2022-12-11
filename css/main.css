@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Lexend", sans-serif; }
+
+header {
+  background-color: #322559;
+  max-width: 100%;
+  padding: 2rem 0; }
+  header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      header .header-container {
+        flex-direction: row; } }
+    @media (min-width: 768px) {
+      header .header-container .logo {
+        margin-right: 2rem;
+        margin-top: 1rem; } }
+    header .header-container .titleNav {
+      color: #ffffff;
+      text-align: center; }
+    header .header-container nav {
+      margin-top: 1rem; }
+      header .header-container nav .nav-order {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 300px; }
+        @media (min-width: 768px) {
+          header .header-container nav .nav-order {
+            flex-direction: row;
+            height: auto; } }
+        header .header-container nav .nav-order .nav__link {
+          color: #ffffff;
+          text-align: center;
+          word-spacing: 0.5rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          text-shadow: 3px 3px 3px #ababab; }
+          header .header-container nav .nav-order .nav__link:hover {
+            opacity: 0.65; }
+          header .header-container nav .nav-order .nav__link .nav--button {
+            display: inline;
+            background-color: #e0334a;
+            padding: 0.5rem;
+            margin-right: 0.2rem;
+            border: 2px solid black;
+            border-radius: 8px; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem; }
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;
+      margin: 0.5rem auto;
+      justify-content: space-between;
+      max-width: 80%; } }
+  .content .content-text {
+    max-width: 100%;
+    line-height: 2rem;
+    vertical-align: top;
+    text-align: justify; }
+    @media (min-width: 768px) {
+      .content .content-text {
+        max-width: 60%; } }
+    .content .content-text p {
+      margin-top: 2rem; }
+    @media (min-width: 768px) {
+      .content .content-text .content-img {
+        max-width: 40%; } }
+  .content .content-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .content .content-nosotros h2,
+    .content .content-nosotros h3 {
+      text-align: center;
+      margin-bottom: 1rem; }
+    .content .content-nosotros .members-list {
+      list-style: url("../img/bullet-violeta.png") none;
+      line-height: 2rem; }
+  .content .img-nosotros {
+    max-width: 60%; }
+  .content .img-torneos {
+    max-width: 60%;
+    padding-right: 2rem; }
+    .content .img-torneos img {
+      border: #322559 6px solid;
+      box-shadow: 6px 6px #e0334a; }
+  .content .contact-content img {
+    border: #322559 6px solid;
+    box-shadow: 6px 6px #e0334a;
+    max-width: 40%; }
+  .content .torneos-text {
+    max-width: 40%; }
+
+.title-torneo {
+  display: flex;
+  justify-content: center; }
+  .title-torneo p.animate__animated.animate__pulse {
+    animation-iteration-count: infinite;
+    font-size: 3rem; }
+
+.video {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .video {
+      width: 80%; }
+      .video iframe {
+        width: 853px;
+        height: 480px; } }
+
+.content-tienda {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .content-tienda .product-card {
+    width: 280px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 5px 0 rgba(119, 103, 112, 0.8);
+    margin: 15px;
+    transition: all 0.3s; }
+    .content-tienda .product-card:hover {
+      box-shadow: 0px 5px 20px 5px rgba(119, 103, 112, 0.8), 2px 2px 5px 0 rgba(119, 103, 112, 0.8); }
+    .content-tienda .product-card .product-img {
+      width: 220px;
+      height: auto;
+      margin: 5px auto; }
+      .content-tienda .product-card .product-img img {
+        width: 100%;
+        height: auto; }
+    .content-tienda .product-card .description {
+      margin-left: 10px; }
+      .content-tienda .product-card .description .category {
+        font-size: 12px; }
+      .content-tienda .product-card .description .product-name {
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-size: 20px; }
+
+.title-contacto {
+  display: flex;
+  justify-content: center; }
+
+.svg-footer {
+  overflow: visible; }
+
+footer {
+  background-color: #e0334a;
+  padding: 0.5rem;
+  position: fixed center;
+  z-index: 10;
+  bottom: 0; }
+  footer .textFooter {
+    color: #ffffff;
+    text-align: center; }
+    footer .textFooter .nav__link {
+      color: #ffffff;
+      text-align: center;
+      word-spacing: 0.5rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-shadow: 3px 3px 3px #ababab; }
+      footer .textFooter .nav__link:hover {
+        opacity: 0.65; }
+
+.container {
+  width: 95%;
+  margin: 0.5rem auto; }
+
+.contact-content {
+  display: flex;
+  justify-content: space-between; }
+  @media (min-width: 768px) {
+    .contact-content a {
+      max-width: 48%; } }
+  .contact-content a img {
+    border: #322559 6px solid;
+    box-shadow: 6px 6px #e0334a;
+    width: 100%; }

@@ -1,0 +1,22 @@
+@mixin justify($alignX) {
+  display: flex;
+  justify-content: $alignX;
+}
+
+@mixin axis($alignX, $alignY) {
+  display: flex;
+  align-items: $alignY;
+  justify-content: $alignX;
+}
+
+@mixin navLink {
+  color: $backgroundColor;
+  text-align: center;
+  word-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 3px 3px 3px #ababab;
+  &:hover {
+    opacity: 0.65;
+  }
+}
